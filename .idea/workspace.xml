@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a48ef1c-a316-4d5a-b733-8a100a3a282e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/mounted.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/mounted.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/virtual-dom.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/virtual-dom.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +76,20 @@
       <workItem from="1617280010942" duration="597000" />
       <workItem from="1617324465702" duration="455000" />
       <workItem from="1617355403914" duration="587000" />
-      <workItem from="1617671324513" duration="1632000" />
+      <workItem from="1617671324513" duration="1820000" />
+      <workItem from="1617691189335" duration="3031000" />
+      <workItem from="1617756984953" duration="688000" />
+      <workItem from="1617762354458" duration="339000" />
+      <workItem from="1617769458290" duration="101000" />
+      <workItem from="1617769581313" duration="126000" />
+      <workItem from="1617769727023" duration="21000" />
+      <workItem from="1617772840112" duration="155000" />
+      <workItem from="1617790743381" duration="700000" />
+      <workItem from="1617843984100" duration="455000" />
+      <workItem from="1617870219220" duration="360000" />
+      <workItem from="1617929192000" duration="498000" />
+      <workItem from="1618019295592" duration="449000" />
+      <workItem from="1618188101070" duration="2000000" />
     </task>
     <servers />
   </component>
@@ -89,7 +101,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

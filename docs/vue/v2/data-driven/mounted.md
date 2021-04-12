@@ -2,7 +2,7 @@
 
 ## $mount方法究竟做了什么
 
-在之前我们说过，`_init` 函数最后执行了`vm.$mount(vm.$options.el)`实现了vm挂载，挂载的目标就是把模板渲染成最终的 DOM。那么`$mount`方法定义在哪呢，$mount方法根据Vue编译模式和平台不同，在不同的编译入口文件有不同的实现。根据课程中主要分析的是`runtime-with-compiler`方式构建的Vue源码。
+在之前我们知道了`_init` 函数最后执行了`vm.$mount(vm.$options.el)`实现了vm挂载，挂载的目标就是把模板渲染成最终的 DOM。那么`$mount`方法定义在哪呢，$mount方法根据Vue编译模式和平台不同，在不同的编译入口文件有不同的实现。根据课程中主要分析的是`runtime-with-compiler`方式构建的Vue源码。
 
 ```js
 const mount = Vue.prototype.$mount
