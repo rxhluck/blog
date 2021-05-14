@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/copy.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/copy.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/create-element.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/create-element.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/update.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/update.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +93,25 @@
       <workItem from="1618188101070" duration="2580000" />
       <workItem from="1618275304201" duration="512000" />
       <workItem from="1618276018729" duration="47000" />
+      <workItem from="1618276115725" duration="647000" />
+      <workItem from="1618290654950" duration="188000" />
+      <workItem from="1619196326474" duration="506000" />
+      <workItem from="1619316148737" duration="333000" />
+      <workItem from="1619346205265" duration="349000" />
+      <workItem from="1619399487436" duration="445000" />
+      <workItem from="1619484776291" duration="147000" />
+      <workItem from="1619571658025" duration="510000" />
+      <workItem from="1619673004080" duration="246000" />
+      <workItem from="1619760307555" duration="672000" />
+      <workItem from="1620262485847" duration="4047000" />
+      <workItem from="1620347148132" duration="5761000" />
+      <workItem from="1620453817208" duration="1895000" />
+      <workItem from="1620608730476" duration="568000" />
+      <workItem from="1620701311129" duration="5103000" />
+      <workItem from="1620780186417" duration="375000" />
+      <workItem from="1620781588307" duration="3152000" />
+      <workItem from="1620867399838" duration="4187000" />
+      <workItem from="1620953900231" duration="315000" />
     </task>
     <servers />
   </component>
