@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a48ef1c-a316-4d5a-b733-8a100a3a282e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/copy.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/copy.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/create-element.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/create-element.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/update.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/update.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/copy.md" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +108,7 @@
       <workItem from="1620780186417" duration="375000" />
       <workItem from="1620781588307" duration="3152000" />
       <workItem from="1620867399838" duration="4187000" />
-      <workItem from="1620953900231" duration="315000" />
+      <workItem from="1620953900231" duration="471000" />
     </task>
     <servers />
   </component>
