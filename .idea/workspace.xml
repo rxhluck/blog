@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a48ef1c-a316-4d5a-b733-8a100a3a282e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/copy.md" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/new-vue.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/create-element.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/create-element.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/index.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/mounted.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/mounted.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/new-vue.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/new-vue.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/render.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/render.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +44,11 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/.vuepress/assets" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -108,7 +119,18 @@
       <workItem from="1620780186417" duration="375000" />
       <workItem from="1620781588307" duration="3152000" />
       <workItem from="1620867399838" duration="4187000" />
-      <workItem from="1620953900231" duration="471000" />
+      <workItem from="1620953900231" duration="789000" />
+      <workItem from="1621213132067" duration="237000" />
+      <workItem from="1621301555274" duration="922000" />
+      <workItem from="1621385271657" duration="5689000" />
+      <workItem from="1621489748843" duration="1122000" />
+      <workItem from="1621495391076" duration="591000" />
+      <workItem from="1621560303119" duration="323000" />
+      <workItem from="1621818284927" duration="388000" />
+      <workItem from="1621904459449" duration="161000" />
+      <workItem from="1621904862591" duration="71000" />
+      <workItem from="1622258002444" duration="7668000" />
+      <workItem from="1622424967682" duration="806000" />
     </task>
     <servers />
   </component>

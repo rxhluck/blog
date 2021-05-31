@@ -1,84 +1,33 @@
-# render
-
-在上一节，我们知道Vue在`mountComponent`方法中将`updateComponent`函数传入`Watcher`函数，在`Watcher`实例化的时候，通过回调执行了`vm.update(vm._render(), hydrating)`进行了第一次渲染，其中`vm._render()`返回的是一个`vnode`，接下来我们来分析`_render()`函数。
-
-## _render()函数究竟做了什么？
-
-`_render`函数是一个定义在Vue原型上的私有方法，最终返回的是一个vnode，它定义在 `src/core/instance/render.js` 文件中：
-```js
+# render函数
+`_render`函数最终返回的是一个`vnode`实例，在该函数中,最终执行的是`$options`上的`render`函数，将`vm.$createElement`函数作为参数传入。
+```javascript
 Vue.prototype._render = function (): VNode {
   const vm: Component = this
   const { render, _parentVnode } = vm.$options
 
-  // reset _rendered flag on slots for duplicate slot check
-  if (process.env.NODE_ENV !== 'production') {
-    for (const key in vm.$slots) {
-      // $flow-disable-line
-      vm.$slots[key]._rendered = false
-    }
-  }
-
-  if (_parentVnode) {
-    vm.$scopedSlots = _parentVnode.data.scopedSlots || emptyObject
-  }
-
-  // set parent vnode. this allows render functions to have access
-  // to the data on the placeholder node.
-  vm.$vnode = _parentVnode
+  // 省略代码
+  
   // render self
   let vnode
   try {
     vnode = render.call(vm._renderProxy, vm.$createElement)
   } catch (e) {
-    handleError(e, vm, `render`)
-    // return error render result,
-    // or previous vnode to prevent render error causing blank component
-    /* istanbul ignore else */
-    if (process.env.NODE_ENV !== 'production') {
-      if (vm.$options.renderError) {
-        try {
-          vnode = vm.$options.renderError.call(vm._renderProxy, vm.$createElement, e)
-        } catch (e) {
-          handleError(e, vm, `renderError`)
-          vnode = vm._vnode
-        }
-      } else {
-        vnode = vm._vnode
-      }
-    } else {
-      vnode = vm._vnode
-    }
+    // 省略代码
   }
-  // return empty vnode in case the render function errored out
-  if (!(vnode instanceof VNode)) {
-    if (process.env.NODE_ENV !== 'production' && Array.isArray(vnode)) {
-      warn(
-        'Multiple root nodes returned from render function. Render function ' +
-        'should return a single root node.',
-        vm
-      )
-    }
-    vnode = createEmptyVNode()
-  }
-  // set parent
-  vnode.parent = _parentVnode
+  // 省略代码
   return vnode
 }
 ```
 
-这段代码最核心的地方在于调用`render`函数，他直接调用了用户编写的`render`函数，我们一般写的模板模式，也需要在之前的`$mount`方法进行编译最终生成`render`函数。这就是之前说的Vue2.x最终渲染总是需要`render`函数。
 
-在 Vue 的官方文档中介绍了 `render` 函数的第一个参数是 `createElement`，那么结合之前的例子：
-
-```html
+Demo:
+```javascript
 <div id="app">
   {{ message }}
 </div>
 ```
-
-相当于我们编写如下 `render` 函数：
-
-```js
+相当于手写`render`函数
+```javascript
 render: function (createElement) {
   return createElement('div', {
      attrs: {
@@ -88,12 +37,12 @@ render: function (createElement) {
 }
 ```
 
-在上面例子中createElement实际上就是`vnode = render.call(vm._renderProxy, vm.$createElement)`中的`vm.$createElement`
+## $createElement函数
+`vm.$createElement`定义于`initRender`函数，该函数在`vm`上定义了两个函数`_c`和`$createElement`，两个函数最终都指向`createElement`函数，仅最后一个标记不同。
 
-## vm.$createElement
-`vm.$createElement`实质是`createElement`函数，最终返回一个`vNode`。这当中`_c`是给模板编译使用，`$createElement`是给手写`render`函数使用。如下代码。
+`_c`和`$createElement`函数不同在于，`_c`是给经过模板编译后`render`函数用的，`$createElement`是给用户手写`render`函数用的。
 
-```js
+```javascript
 export function initRender (vm: Component) {
   // ...
   // bind the createElement fn to this instance
@@ -105,9 +54,29 @@ export function initRender (vm: Component) {
   // user-written render functions.
   vm.$createElement = (a, b, c, d) => createElement(vm, a, b, c, d, true)
 }
+
 ```
 
-## 总结
-`render`函数通过执行传入的`vm.$createElement`函数最终返回一个vNode。`vm.$createElement`实际就是`createElement`函数。
 
+问题：那么`vnode = render.call(vm._renderProxy, vm.$createElement)`,`render`函数始终将`$createElement`函数作为传入，那么`_c`在哪里调用呢？
 
+答：编译生成的`render`函数不同。
+```javascript
+// 用户手写
+render: function (createElement) {
+  return createElement('div', {
+     attrs: {
+        id: 'app'
+      },
+  }, this.message)
+}
+
+// Vue编译生成
+render: function() {
+  return this._c('div', {
+    attrs: {
+      id: 'app'
+    },
+  }, this.message);
+}
+```

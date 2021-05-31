@@ -1,82 +1,24 @@
 # Vue实例挂载
 
-## $mount方法究竟做了什么
-
-在之前我们知道了`_init` 函数最后执行了`vm.$mount(vm.$options.el)`实现了vm挂载，挂载的目标就是把模板渲染成最终的 DOM。那么`$mount`方法定义在哪呢，$mount方法根据Vue编译模式和平台不同，在不同的编译入口文件有不同的实现。根据课程中主要分析的是`runtime-with-compiler`方式构建的Vue源码。
-
+## $mount函数
+通过vue-cli创建项目时会选择多种构建模式，针对不同构建模式`$mount`有不同的实现，我们经常用的`compile`模式下，`$mount`是这么定义的
 ```js
 const mount = Vue.prototype.$mount
 Vue.prototype.$mount = function (
   el?: string | Element,
   hydrating?: boolean
 ): Component {
-  el = el && query(el)
-
-  /* istanbul ignore if */
-  if (el === document.body || el === document.documentElement) {
-    process.env.NODE_ENV !== 'production' && warn(
-      `Do not mount Vue to <html> or <body> - mount to normal elements instead.`
-    )
-    return this
-  }
-
-  const options = this.$options
-  // resolve template/el and convert to render function
-  if (!options.render) {
-    let template = options.template
-    if (template) {
-      if (typeof template === 'string') {
-        if (template.charAt(0) === '#') {
-          template = idToTemplate(template)
-          /* istanbul ignore if */
-          if (process.env.NODE_ENV !== 'production' && !template) {
-            warn(
-              `Template element not found or is empty: ${options.template}`,
-              this
-            )
-          }
-        }
-      } else if (template.nodeType) {
-        template = template.innerHTML
-      } else {
-        if (process.env.NODE_ENV !== 'production') {
-          warn('invalid template option:' + template, this)
-        }
-        return this
-      }
-    } else if (el) {
-      template = getOuterHTML(el)
-    }
-    if (template) {
-      /* istanbul ignore if */
-      if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
-        mark('compile')
-      }
-
-      const { render, staticRenderFns } = compileToFunctions(template, {
-        shouldDecodeNewlines,
-        shouldDecodeNewlinesForHref,
-        delimiters: options.delimiters,
-        comments: options.comments
-      }, this)
-      options.render = render
-      options.staticRenderFns = staticRenderFns
-
-      /* istanbul ignore if */
-      if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
-        mark('compile end')
-        measure(`vue ${this._name} compile`, 'compile', 'compile end')
-      }
-    }
-  }
+  .....省略代码
   return mount.call(this, el, hydrating)
 }
 ```
-在上面的代码中，先将Vue本身的`$mount`方法缓存起来，再重写了该方法，重写的方法中，首先定义了不能是`document.body`和`html`这一类的根节点，然后判断如果你没有定义`render`函数，则会将`el`、`template`转化为render函数，在vue2.x中，渲染最后都是需要`render`函数的。无论你是通过`.vue`文件，`template`或`el`属性最终都会通过`compileToFunctions`转换为render函数，最后再调用缓存的`$mount`函数执行渲染。
+在上面方法中，先将Vue原型上的`$mount`方法缓存下来放于`mount`变量，再重写了该方法，最终再执行`mount`方法。
+省略的代码实际是判断是否有`render`函数，如果没有的话就生成`render`函数，具体生成的方法，在编译模块中介绍。
 
+注意:在Vue2.0中，最终都是需要`render`函数，无论你是使用.vue文件，还是写了`template`，最终都会转换为`render`函数。
 
- 被缓存的`$mount` 方法在 `src/platform/web/runtime/index.js` 中定义，el表示最后被挂载的元素，在浏览器环境中，如果`el`为字符串，那么他会通过`query`方法将其转换为DOM。
- ```js
+那么最终调用的`$mount`函数，定义于`src/platform/web/runtime/index.js`中，该函数是直接再`runtime-only`版本下直接调用，接收了两个参数`el`可以是字符串，也可以是真实的dom元素，最终都会生成真实的dom元素，最终执行了`mountComponent`函数。
+```js
 // public mount method
 Vue.prototype.$mount = function (
   el?: string | Element,
@@ -87,9 +29,8 @@ Vue.prototype.$mount = function (
 }
 ```
 
-## mountComponent做了什么
-`$mount` 方法实际上会去调用 `mountComponent` 方法，这个方法定义在 `src/core/instance/lifecycle.js` 文件中：
-
+## mountComponent函数
+mountComponent函数会完成渲染的全部工作，其中最为核心的两步是，定义了`updateComponent`函数和实例化渲染`Watcher`,
 ```js
 export function mountComponent (
   vm: Component,
@@ -97,47 +38,13 @@ export function mountComponent (
   hydrating?: boolean
 ): Component {
   vm.$el = el
-  if (!vm.$options.render) {
-    vm.$options.render = createEmptyVNode
-    if (process.env.NODE_ENV !== 'production') {
-      /* istanbul ignore if */
-      if ((vm.$options.template && vm.$options.template.charAt(0) !== '#') ||
-        vm.$options.el || el) {
-        warn(
-          'You are using the runtime-only build of Vue where the template ' +
-          'compiler is not available. Either pre-compile the templates into ' +
-          'render functions, or use the compiler-included build.',
-          vm
-        )
-      } else {
-        warn(
-          'Failed to mount component: template or render function not defined.',
-          vm
-        )
-      }
-    }
-  }
+  // 省略代码
   callHook(vm, 'beforeMount')
 
   let updateComponent
   /* istanbul ignore if */
   if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
-    updateComponent = () => {
-      const name = vm._name
-      const id = vm._uid
-      const startTag = `vue-perf-start:${id}`
-      const endTag = `vue-perf-end:${id}`
-
-      mark(startTag)
-      const vnode = vm._render()
-      mark(endTag)
-      measure(`vue ${name} render`, startTag, endTag)
-
-      mark(startTag)
-      vm._update(vnode, hydrating)
-      mark(endTag)
-      measure(`vue ${name} patch`, startTag, endTag)
-    }
+   // 省略代码
   } else {
     updateComponent = () => {
       vm._update(vm._render(), hydrating)
@@ -165,11 +72,9 @@ export function mountComponent (
   return vm
 }
 ```
-在这段代码中核心在于
+1.mountComponent首先执行的是实例化渲染`Watcher`，将`updateComponent`作为回调函数传入，并在实例化时，执行了回调函数，并且会监听`vm`上数据变化再次执行该函数进行渲染。
 
-一、实例化了Watcher类，他在这的核心作用在于，第一次调用就执行回调函数执行了`updateComponent`函数，并且会去监听vm实例变化会再次去触发回调函数进行重渲染。
+2.`updateComponent`函数执行也分为两步，第一步执行`vm`实例上的`_render`函数生成`vnode`，再执行`_update`函数渲染到页面上，完成渲染的全部流程。
 
-二、updateComponent函数，先通过之前定义好的`_render`函数生成vnode，再通过`_update`渲染到页面上。
 
-## 总结
-在不同的构建模式和平台下，`$mount`有不同的处理方式，但是最终都会需要`render`函数定义到`vm`实例上，然后通过执行`mountComponent`函数进行渲染，该函数有两个核心，一个是实例化了 `Watcher`类，一个是定义了`updateComponent`函数,其中`updateComponent`函数是先调用之前的`_render`函数生成vnode，然后渲染。`Watcher`类在实例化时，会执行回调函数也就是传入的`updateComponent`函数，并且在后续`vm`实例监听数值发生变化时执行`updateComponent`进行重新渲染。
+

@@ -79,9 +79,9 @@ module.exports = {
         collapsable: false,
       }, {
         title: '数据驱动',
-        collapsable: false,
+        collapsable: true,
         children: [
-          ['data-driven/', 'Introduction'],
+          ['data-driven/', '什么是数据驱动'],
           'data-driven/new-vue',
           'data-driven/mounted',
           'data-driven/render',
