@@ -79,7 +79,7 @@ module.exports = {
         collapsable: false,
       }, {
         title: '数据驱动',
-        collapsable: true,
+        collapsable: false,
         children: [
           ['data-driven/', '什么是数据驱动'],
           'data-driven/new-vue',
@@ -88,6 +88,14 @@ module.exports = {
           'data-driven/virtual-dom',
           'data-driven/create-element',
           'data-driven/update'
+        ]
+      }, {
+        title: '组件化',
+        collapsable: false,
+        children: [
+          ['components/', '什么是组件化'],
+          'components/create-component',
+          'components/patch'
         ]
       }],
       '/explore/': [{

@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a48ef1c-a316-4d5a-b733-8a100a3a282e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/new-vue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/create-component.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/patch.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/create-element.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/create-element.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/mounted.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/mounted.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/new-vue.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/new-vue.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/data-driven/render.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/data-driven/render.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/index.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +26,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1qHnouiHHCPkI8pTq6FtBp4i4ou" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -130,7 +130,41 @@
       <workItem from="1621904459449" duration="161000" />
       <workItem from="1621904862591" duration="71000" />
       <workItem from="1622258002444" duration="7668000" />
-      <workItem from="1622424967682" duration="806000" />
+      <workItem from="1622424967682" duration="1502000" />
+      <workItem from="1622508929161" duration="272000" />
+      <workItem from="1622700910159" duration="1405000" />
+      <workItem from="1622770961359" duration="559000" />
+      <workItem from="1623028718865" duration="535000" />
+      <workItem from="1623114810707" duration="1462000" />
+      <workItem from="1623200431039" duration="469000" />
+      <workItem from="1623287651540" duration="685000" />
+      <workItem from="1623371145092" duration="513000" />
+      <workItem from="1623372956271" duration="627000" />
+      <workItem from="1623818959871" duration="596000" />
+      <workItem from="1623892204312" duration="127000" />
+      <workItem from="1623978305005" duration="371000" />
+      <workItem from="1623994806205" duration="590000" />
+      <workItem from="1624072280416" duration="942000" />
+      <workItem from="1624242386525" duration="220000" />
+      <workItem from="1624242829524" duration="396000" />
+      <workItem from="1624324135068" duration="655000" />
+      <workItem from="1624410113093" duration="251000" />
+      <workItem from="1624412936793" duration="597000" />
+      <workItem from="1624434324247" duration="438000" />
+      <workItem from="1624501792913" duration="368000" />
+      <workItem from="1624583505704" duration="522000" />
+      <workItem from="1624840132865" duration="364000" />
+      <workItem from="1624841492379" duration="568000" />
+      <workItem from="1624929397329" duration="1202000" />
+      <workItem from="1626226112908" duration="198000" />
+      <workItem from="1626311426536" duration="370000" />
+      <workItem from="1626355430552" duration="328000" />
+      <workItem from="1626357397002" duration="549000" />
+      <workItem from="1626404903353" duration="580000" />
+      <workItem from="1626405760459" duration="183000" />
+      <workItem from="1626655897054" duration="835000" />
+      <workItem from="1626742821780" duration="1314000" />
+      <workItem from="1628908593508" duration="13027000" />
     </task>
     <servers />
   </component>

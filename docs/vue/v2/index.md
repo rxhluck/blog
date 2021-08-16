@@ -1,5 +1,5 @@
 # 前言
- 这是我个人对[《Vue.js 源码揭秘》](http://coding.imooc.com/class/228.html)视频课程学习的总结，不做任何宣传，对每一节课，尽量用自己的话来进行叙述。如果有任何错误，请在issues提出，欢迎交流。
+ 对[《Vue.js 源码揭秘》](http://coding.imooc.com/class/228.html)视频课程学习的总结，不做任何宣传，对每一节课，尽量用自己的话来进行叙述。如果有任何错误，请在issues提出，欢迎交流。
  
   分析的版本是 Vue.js 的最新版本 Vue.js 2.5.17-beta.0。
  
