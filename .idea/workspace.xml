@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a48ef1c-a316-4d5a-b733-8a100a3a282e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/create-component.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/patch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/merge-option.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/vue/v2/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/index.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +160,15 @@
       <workItem from="1626405760459" duration="183000" />
       <workItem from="1626655897054" duration="835000" />
       <workItem from="1626742821780" duration="1314000" />
-      <workItem from="1628908593508" duration="13027000" />
+      <workItem from="1628908593508" duration="13702000" />
+      <workItem from="1629117523282" duration="566000" />
+      <workItem from="1629164557064" duration="3026000" />
+      <workItem from="1629248655424" duration="385000" />
+      <workItem from="1629514394710" duration="389000" />
+      <workItem from="1629682574523" duration="436000" />
+      <workItem from="1629767394237" duration="378000" />
+      <workItem from="1629855287127" duration="416000" />
+      <workItem from="1629941614669" duration="3012000" />
     </task>
     <servers />
   </component>
