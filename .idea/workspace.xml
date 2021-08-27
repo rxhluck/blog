@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0a48ef1c-a316-4d5a-b733-8a100a3a282e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/merge-option.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/.vuepress/public/assets/lifecycle.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/component-registers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/vue/v2/components/lifecycle.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.vuepress/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.vuepress/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/vue/v2/components/merge-option.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vue/v2/components/merge-option.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/vue/v2/components" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.standard" value="project" />
@@ -40,12 +44,14 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/docs/.vuepress/public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/vue/v2/components" />
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public/assets" />
       <recent name="$PROJECT_DIR$/docs/.vuepress/assets" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/.vuepress/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -168,12 +174,16 @@
       <workItem from="1629682574523" duration="436000" />
       <workItem from="1629767394237" duration="378000" />
       <workItem from="1629855287127" duration="416000" />
-      <workItem from="1629941614669" duration="3012000" />
+      <workItem from="1629941614669" duration="3255000" />
+      <workItem from="1630026171846" duration="8916000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

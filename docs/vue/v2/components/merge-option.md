@@ -19,7 +19,7 @@
     }
 ```
 
-## 一、外部调用时合并配置：
+## 外部调用时合并配置
 1.外部调用主要使用的是`mergeOptions`函数进行合并，通过`resolveConstructorOptions`函数获取`Vue`上的`options`;
 ```javascript
 // 根据原型链 vm.constructor = Vue, vm为Vue原型函数实例，其constructor指向原型函数。
@@ -149,7 +149,7 @@ vm.$options = {
 }
 ```
 
-# 二、组件场景
+## 子组件场景
 1.组件场景通过执行了，`initInternalComponent`进行配置合并，其中options不同于初始化，opts为子组件配置的options。
 ```javascript
 export function initInternalComponent (vm: Component, options: InternalComponentOptions) {

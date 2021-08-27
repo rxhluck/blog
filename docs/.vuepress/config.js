@@ -95,7 +95,10 @@ module.exports = {
         children: [
           ['components/', '什么是组件化'],
           'components/create-component',
-          'components/patch'
+          'components/patch',
+          'components/merge-option',
+          'components/lifecycle',
+          'components/component-registers'
         ]
       }],
       '/explore/': [{
