@@ -9,47 +9,45 @@ module.exports = {
       text: 'JS相关知识',
       link: '/js/base/'
     },
-      {
-        text: 'CSS布局',
-        link: '/css/prepare/'
+    {
+      text: 'CSS布局',
+      link: '/css/prepare/'
+    },
+    {
+      text: 'Webpack',
+      link: '/webpack/prepare'
+    },
+    {
+      text: 'Vue源码分析',
+      items: [{
+        text: 'Vue2.0源码分析',
+        // link: '/vue/v2/data-driven/'
+        link: '/vue/v2/'
       },
-      {
-        text: 'Webpack',
-        link: '/webpack/prepare'
-      },
-      {
-        text: 'Vue源码分析',
-        items: [{
-          text: 'Vue2.0源码分析',
-          // link: '/vue/v2/data-driven/'
-          link: '/vue/v2/'
-        },
-          {
-            text: 'Vue3.0源码分析',
-            link: '/vue/v3/'
-          }
-        ]
-      }, {
-        text: 'React源码分析',
-        link: '/react/prepare/'
-      }, {
-        text: '算法和数据结构',
-        link: '/nodejs/prepare'
-      }, {
-        text: '网络协议',
-        link: '/http/prepare'
-      }, {
-        text: '浏览器机制',
-        link: '/explore/'
-      }
-    ],
+        {
+          text: 'Vue3.0源码分析',
+          link: '/vue/v3/'
+        }
+      ]
+    }, {
+      text: 'React介绍',
+      link: '/react/prepare/'
+    }, {
+      text: '算法和数据结构',
+      link: '/nodejs/prepare'
+    }, {
+      text: '网络协议',
+      link: '/http/prepare'
+    }, {
+      text: '浏览器机制',
+      link: '/explore/'
+    }],
     sidebar: {
       '/js/': [{
         title: 'JS相关知识',
         collapsable: false,
         children: [
           ['base/', '基础知识'],
-          'base/closure',
           'base/prototype',
           'base/extends',
           'base/clone',
